@@ -11,3 +11,85 @@
     <button mat-button (click)="clearCart()">Clear Cart</button>
     <button class="checkout" mat-button>Checkout</button>
   </div>
+
+  <h3>Cart</h3>
+
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
+
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }} </span>
+  <span>{{ item.price | currency }}</span>
+</div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label for="firstname">
+      FirstName
+    </label>
+    <input id="firstname" type="text" formControlName="firstname">
+  </div>
+  <div>
+    <label for="lastname">
+      LastName
+    </label>
+    <input id="lastname" type="text" formControlName="lastname">
+  </div>
+
+  <div>
+    <label for="address">
+      Address
+    </label>
+    <input id="address" type="text" formControlName="address">
+  </div>
+  <div>
+    <label for="city">
+      City
+    </label>
+    <input id="city" type="text" formControlName="city">
+  </div>
+  <div>
+    <label for="country">
+      Country
+    </label>
+    <input id="country" type="text" formControlName="country">
+  </div>
+  <div>
+    <label for="Payment option">
+        Payment option
+    </label>
+    <input id="paymentoption" type="text" formControlName="paymentoption">
+  </div>
+  <div>
+    <label for="credit card number">
+        Credit Card Number
+    </label>
+    <input id="credit card number" type="text" formControlName="credit card number">
+  </div>
+  <div>
+    <label for="expiry date">
+          Expiry date
+    </label>
+    <input id="expiry date" type="text" formControlName="expiry date">
+  </div>
+  <div>
+    <label for="cvc">
+          CVC
+    </label>
+    <input id="cvc" type="text" formControlName="cvc">
+  </div>
+  <div>
+    <label for="name on card">
+          Name On Card
+    </label>
+    <input id="name on card" type="text" formControlName="name on card">
+  </div>
+
+
+
+  <button class="button" type="submit">submit</button>
+
+</form>
+

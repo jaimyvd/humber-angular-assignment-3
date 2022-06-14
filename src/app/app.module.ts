@@ -21,6 +21,8 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { OrderItemComponent } from './components/order-item/order-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { DirDirective } from './dir.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { DatePipe } from '@angular/common';
     NavBarComponent,
     ItemComponent,
     CartItemComponent,
-    OrderItemComponent
+    OrderItemComponent,
+    CheckoutComponent,
+    DirDirective
   ],
   imports: [
     BrowserModule,
